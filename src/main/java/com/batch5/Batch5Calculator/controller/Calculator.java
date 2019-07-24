@@ -7,6 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Calculator {
+	
+	@GetMapping("multiplication")
+	@ResponseBody
+	public double multiplication(@RequestParam double firstOperand, @RequestParam double secondOperand) {
+		return firstOperand * secondOperand;
+	}
+
+}
 	@GetMapping("subtraction")
 	@ResponseBody
 	public double subtraction(@RequestParam double firstOperand, @RequestParam double secondOperand) {
