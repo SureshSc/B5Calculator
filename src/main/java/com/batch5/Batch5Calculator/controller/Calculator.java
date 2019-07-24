@@ -15,3 +15,9 @@ public class Calculator {
 	}
 
 }
+	@GetMapping("subtraction")
+	@ResponseBody
+	public double subtraction(@RequestParam double firstOperand, @RequestParam double secondOperand) {
+		return firstOperand-secondOperand;
+	}
+}
