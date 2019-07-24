@@ -18,22 +18,21 @@ public class StepDef {
 	
 	String url;
 	Double result;
-	
+
 	@Given("Rest Api {string}")
 	public void rest_Api(String serviceUrl) {
 		url=serviceUrl;
-	    
 	}
 
-	@When("I invoking the given rest api")
-	public void i_invoking_the_given_rest_api() {
+	@When("invoking the given rest api")
+	public void invoking_the_given_rest_api() {
 		RestTemplate restTemp = new RestTemplate();
 		result = restTemp.getForObject(url, Double.class);
 	}
 
-	@Then("the expected sum is {int}")
-	public void the_expected_sum_is(Integer expected) {
-	   assertEquals(expected, result, 0.01);
+	@Then("expecting the product is {int}")
+	public void expecting_the_product_is(Integer expected) {
+		assertEquals(expected, result, 0.01);
 	}
 
 
