@@ -33,6 +33,7 @@ public class StepDef {
 	@Then("expecting the product is {int}")
 	public void expecting_the_product_is(Integer expected) {
 		assertEquals(expected, result, 0.01);
+
 	}
 
 
