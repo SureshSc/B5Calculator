@@ -25,13 +25,13 @@ public class StepDef {
 	    
 	}
 
-	@When("I invoking the given rest api")
+	@When("invoking the given rest api")
 	public void i_invoking_the_given_rest_api() {
 		RestTemplate restTemp = new RestTemplate();
 		result = restTemp.getForObject(url, Double.class);
 	}
 
-	@Then("the expected sum is {int}")
+	@Then("the expected multiplication result is {int}")
 	public void the_expected_sum_is(Integer expected) {
 	   assertEquals(expected, result, 0.01);
 	}
