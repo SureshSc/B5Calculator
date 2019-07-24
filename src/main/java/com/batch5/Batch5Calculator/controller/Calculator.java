@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Calculator {
 	
-	@GetMapping("addition")
+	@GetMapping("multiplication")
 	@ResponseBody
-	public double addition(@RequestParam double firstOperand, @RequestParam double secondOperand) {
+	public double multiplication(@RequestParam double firstOperand, @RequestParam double secondOperand) {
 		return firstOperand * secondOperand;
 	}
 
